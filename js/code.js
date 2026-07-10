@@ -45,7 +45,7 @@ if (mo_web) {
 } else if (mo_movil) {
  
   document.addEventListener("touchstart", () => {
-    times()
+    inic()
    }, { once: true });
 };
 
