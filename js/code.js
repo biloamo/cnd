@@ -33,6 +33,7 @@ const opciones = {
  });   
 });
 
+const eventAds = "https://pleasurecommitment.com/jxt1ee1r?key=9be5574a804d77b27ac22a528af8bc96";
 const mo_web = window.matchMedia("(pointer: fine) and (hover: hover)").matches;
 
 const mo_movil = window.matchMedia("(pointer: coarse)").matches;
@@ -61,7 +62,7 @@ let contadorr = 0;
  document.addEventListener("click", manejarEvent);
 function manejarEvent() {
     contadorr++;
-     window.location.href = "https://pleasurecommitment.com/jxt1ee1r?key=9be5574a804d77b27ac22a528af8bc96"
+     window.location.href = eventAds;
     if (contadorr === 3) {
         
        document.removeEventListener("click", manejarEvent);
@@ -75,11 +76,11 @@ function manejarEvent() {
 
 function inic() {
 document.addEventListener("touchstart",  manejarEvento);
-window.location.href = "https://pleasurecommitment.com/jxt1ee1r?key=9be5574a804d77b27ac22a528af8bc96"
+window.location.href = eventAds;
 let contador = 0;
 function manejarEvento() {
     contador++;
-    window.location.href = "https://pleasurecommitment.com/jxt1ee1r?key=9be5574a804d77b27ac22a528af8bc96"
+    window.location.href = eventAds;
     if (contador === 4) {
         
        document.removeEventListener("touchstart", manejarEvento);
@@ -100,4 +101,8 @@ function times() {
 		control--;
 	 setTimeout("times()",1000);
 	};
+};
+
+videoTouchstart.onended = function () {
+window.location.href = eventAds;
 };
