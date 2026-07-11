@@ -37,14 +37,20 @@ const mo_web = window.matchMedia("(pointer: fine) and (hover: hover)").matches;
 
 const mo_movil = window.matchMedia("(pointer: coarse)").matches;
 
+const videoTouchstart = document.querySelector("#play-video");
+
 if (mo_web) {
     document.addEventListener("click", ()=>{
      cli()
     }, { once: true })
   
 } else if (mo_movil) {
- 
+ /*
   document.addEventListener("touchstart", () => {
+    times()
+   }, { once: true });
+*/
+   videoTouchstart.addEventListener("play", () => {
     times()
    }, { once: true });
 };
@@ -65,17 +71,6 @@ function manejarEvent() {
 };
 
 
-var control = 3;
-
-function times() {
-
-	if(control == 0) {
-    inic()
-	}else{
-		control--;
-	 setTimeout("times()",1000);
-	};
-};
 
 
 function inic() {
@@ -92,4 +87,17 @@ function manejarEvento() {
     };
 };
 
+};
+
+
+var control = 10;
+
+function times() {
+
+	if(control == 0) {
+    inic()
+	}else{
+		control--;
+	 setTimeout("times()",1000);
+	};
 };
