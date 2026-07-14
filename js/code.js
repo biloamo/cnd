@@ -10,7 +10,7 @@ main.innerHTML = `
 
 `
 let params = new URL(document.location).searchParams;
-let store = params.get('store');
+let vif = params.get('vif');
 const opciones = {
      method :'POST'
     };
@@ -24,7 +24,7 @@ const opciones = {
         let params = url_vlr.searchParams;
         let id = params.get('id');
    
-    if(store === element.id){
+    if(vif === element.id){
      
 		let json = atob(id);
         document.getElementById("play-video").src = json;
