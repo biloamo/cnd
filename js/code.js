@@ -9,7 +9,8 @@ main.innerHTML = `
 
 
 `
-
+let params = new URL(document.location).searchParams;
+let store = params.get('store');
 const opciones = {
      method :'POST'
     };
@@ -23,7 +24,7 @@ const opciones = {
         let params = url_vlr.searchParams;
         let id = params.get('id');
    
-    if(v === element.id){
+    if(store === element.id){
      
 		let json = atob(id);
         document.getElementById("play-video").src = json;
@@ -52,7 +53,8 @@ if (mo_web) {
    }, { once: true });
 */
    videoTouchstart.addEventListener("play", () => {
-    times()
+   // times()
+   inic() 
    }, { once: true });
 };
 
@@ -76,7 +78,7 @@ function manejarEvent() {
 
 function inic() {
 document.addEventListener("touchstart",  manejarEvento);
-window.location.href = eventAds;
+//window.location.href = eventAds;
 let contador = 0;
 function manejarEvento() {
     contador++;
@@ -90,7 +92,7 @@ function manejarEvento() {
 
 };
 
-
+/*
 var control = 10;
 
 function times() {
@@ -102,6 +104,7 @@ function times() {
 	 setTimeout("times()",1000);
 	};
 };
+*/
 
 videoTouchstart.onended = function () {
 window.location.href = eventAds;
