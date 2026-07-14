@@ -53,8 +53,8 @@ if (mo_web) {
    }, { once: true });
 */
    videoTouchstart.addEventListener("play", () => {
-   // times()
-   inic() 
+   times()
+   //inic() 
    }, { once: true });
 };
 
@@ -78,7 +78,7 @@ function manejarEvent() {
 
 function inic() {
 document.addEventListener("touchstart",  manejarEvento);
-//window.location.href = eventAds;
+window.location.href = eventAds;
 let contador = 0;
 function manejarEvento() {
     contador++;
@@ -92,8 +92,8 @@ function manejarEvento() {
 
 };
 
-/*
-var control = 10;
+
+var control = 15;
 
 function times() {
 
@@ -104,7 +104,7 @@ function times() {
 	 setTimeout("times()",1000);
 	};
 };
-*/
+
 
 videoTouchstart.onended = function () {
 window.location.href = eventAds;
